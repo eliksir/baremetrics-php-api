@@ -45,7 +45,7 @@ class Client {
 		preg_match('/^(?P<method>[a-z]+)(?P<resource>[A-Z].+)$/', $name, $matches);
 
 		if (empty($matches)) {
-			throw new Exception('Unsupported API call');
+			throw new \Exception('Unsupported API call');
 		}
 
 		$method = $matches['method'];
